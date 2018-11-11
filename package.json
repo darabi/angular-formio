@@ -32,7 +32,8 @@
   "bugs": {
     "url": "https://github.com/formio/angular-formio/issues"
   },
-  "main": "src/index.ts",
+  "main": "dist/angular-formio.umd.js",
+  "jsnext:main": "dist/index.js",
   "devDependencies": {
     "@angular/cli": "^7.0.4",
     "@angular/common": "^7.0.2",
