@@ -1,6 +1,6 @@
 {
   "name": "angular-formio",
-  "version": "3.6.0",
+  "version": "3.6.0-mc1",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -12,6 +12,7 @@
     "lite": "lite-server",
     "build:demo": "webpack --mode=production",
     "demo": "gulp build && concurrently --raw \"webpack-dev-server --open\" \"npm run test:watch\"",
+    "tag": "VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]');git add -A; git commit -m \"Build $VERSION\";git push origin master;git tag v$VERSION;git push origin --tags;",
     "publish": "gulp build && gulp package-version && npm publish dist",
     "test": "tsc && karma start",
     "test:watch": "karma start --auto-watch"
@@ -31,6 +32,7 @@
   "bugs": {
     "url": "https://github.com/formio/angular-formio/issues"
   },
+  "main": "src/index.ts",
   "devDependencies": {
     "@angular/cli": "^7.0.4",
     "@angular/common": "^7.0.2",
@@ -104,8 +106,10 @@
     "zone.js": "^0.8.26"
   },
   "dependencies": {
-    "formiojs": "^3.7.0",
+    "formiojs": "git+https://github.com/darabi/formio.js.git#v3.6.13-mc2",
     "lodash": "^4.17.11",
-    "ngx-bootstrap": "^3.1.1"
+    "native-promise-only": "^0.8.1",
+    "ngx-bootstrap": "^3.1.1",
+    "jquery": "^3.3.1"
   }
 }
