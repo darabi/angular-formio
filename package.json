@@ -13,7 +13,7 @@
     "build:demo": "webpack --mode=production",
     "demo": "gulp build && concurrently --raw \"webpack-dev-server --open\" \"npm run test:watch\"",
     "tag": "VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]');git add -A; git commit -m \"Build $VERSION\";git push origin master;git tag -a -m \"Tagging version $VERSION\" v$VERSION; git push origin --tags;",
-    "publish": "gulp build && gulp package-version && npm publish dist",
+    "publish": "gulp build && gulp package-version && npm run tag && npm publish dist",
     "test": "tsc && karma start",
     "test:watch": "karma start --auto-watch"
   },
