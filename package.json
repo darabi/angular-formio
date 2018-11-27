@@ -107,7 +107,7 @@
     "zone.js": "^0.8.26"
   },
   "dependencies": {
-    "formiojs": "3.6.13-mc9",
+    "formiojs": "3.6.13-mc11",
     "lodash": "^4.17.11",
     "native-promise-only": "^0.8.1",
     "ngx-bootstrap": "^3.1.1",
