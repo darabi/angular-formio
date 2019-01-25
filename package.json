@@ -105,7 +105,7 @@
     "zone.js": "^0.8.26"
   },
   "dependencies": {
-    "formiojs": "^3.12.2-mc1",
+    "formiojs": "3.12.2-mc1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "native-promise-only": "^0.8.1",
