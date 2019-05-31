@@ -1,6 +1,6 @@
 {
   "name": "angular-formio",
-  "version": "3.16.2-mc1",
+  "version": "3.16.2-mc2",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -106,8 +106,8 @@
   },
   "dependencies": {
     "bower": "^1.8.8",
-    "formiojs": "3.20.17-mc1",
-    "jquery": "^3.3.1",
+    "formiojs": "3.21.3-mc1",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.11",
     "native-promise-only": "^0.8.1",
     "ngx-bootstrap": "^4.1.1"
